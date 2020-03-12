@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <style>
+        #parallax{
+            background-image: url("img/banner.jpg");
+            background-size: cover;
+            background-position: top;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .mask{
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100vh;
+            padding-top: calc(50vh - 50px);
+        }
+
+        .h1{
+            color: lightblue;
+            width: 200px;
+            height: 100px;
+        }
+
+        body{
+            margin:0;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+
+<body >
+    <nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </nav>
+
+    <main>     
+        <section>
+            <div class="container mt-5 mb-5 ">
+                <div class = "mt-5 mb-5">
+                    <div class="d-flex justify-content-center">
+                        <h1 class='p-3 mb-2 font-weight-bold'>My Coffee Bar</h1>
+                    </div>
+                </footer>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="card mx-auto">
+                            <img src="https://www.starbucks.com.tw/common/objects/images/product/20170717104522150.jpg"
+                                class="card-img-top" alt="Espresso Choice Extra Shot Latte">
+                            <div class="card-body">
+                                <h2 class="card-text mb-5">特選馥郁那堤</h2>
+                                <p class="card-text">特選馥郁那堤的上市，受到很多咖啡老饕的好評，因此增加此款飲料，希望提供顧客更多樣的咖啡體驗。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card mx-auto">
+                            <img src="https://www.starbucks.com.tw/common/objects/images/product/20130813161442705.jpg"
+                                class="card-img-top" alt="Caffé Mocha">
+                            <div class="card-body">
+                                <h2 class="card-text mb-5">摩卡</h2>
+                                <p class="card-text">由濃縮咖啡、摩卡醬及新鮮蒸奶調製，覆上輕盈柔細的鮮奶油，帶來香濃的巧克力及咖啡風味。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-4 col-12">
+                        <div class="card mx-auto">
+                            <img src="https://www.starbucks.com.tw/common/objects/images/product/20130813163137244.jpg"
+                                class="card-img-top" alt="Iced Caffé Mocha">
+                            <div class="card-body">
+                                <h2 class="card-text mb-5">冰摩卡</h2>
+                                <p class="card-text">由濃縮咖啡、摩卡醬及優質鮮奶調製，覆上輕盈柔細的鮮奶油，帶來香濃的巧克力及咖啡風味。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="parallax" class="mt-5 mb-5">
+            <div class="mask">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <span class="border border-white ">
+                        <h1 class="text-white-50 d-none d-md-block" >MY COFFEE</h1>
+                    </span>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="container mt-5 mb-5 ">
+                <!-- <div class="row flex-column-reverse flex-md-row"> -->
+                    <div class="row">    
+                  <div class="col-12 col-md-6 order-1 order-md-0">
+                    <img src="https://www.starbucks.com.tw/common/objects/images/product/20130813160909561.jpg"
+                                class="card-img-top" alt="Espresso">
+                  </div>
+                  <div class="col-12 col-md-6 ">
+                    <div class="card-body ">
+                        <h2 class="card-text ">濃縮咖啡</h2>
+                        <h3 class="card-text mb-5 ">Espresso</h3>
+                        <p class="card-text "  >濃郁豐厚的濃縮咖啡是星巴克咖啡的靈魂，它醇厚的口感、綿長香氣及焦糖般的甜味，豐富而令人難忘。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+        </section>
+
+    </main>
+    <footer class = "mt-5  bg-warning ">
+        <div class="d-flex justify-content-center">
+            <span class='p-3 mb-2  text-white font-weight-bold'>此頁面內容僅為全端與python資料探勘工程師養成班使用</span>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

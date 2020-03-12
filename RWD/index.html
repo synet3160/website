@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+
+        a {
+            color:blue;
+            text-decoration: none;
+        }
+        a:hover{
+            color: lightskyblue;
+            background-color: #555;
+        }
+
+        .pc {
+            display: block;
+        }
+
+        .mobile {
+            display: none;
+        }
+        .clearfix{
+            clear: both;
+        }
+
+        #container{
+            margin: 0 auto;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #menu_area {
+            width: 366px;
+            height:100vh;
+            background-color: lightgrey;
+            float: left;  
+        }
+        #content_area{
+            width: calc(100% - 366px);
+            height: 100vh;
+            background-color:white;
+            float: left;
+            background-image: url("image/body_bg_img1.jpg");
+            background-size: cover;
+            background-position: center;  
+        }
+
+        /*左方menu及LOGO*/
+        #menu_block {
+            
+            width: 366px;
+            height:100vh;
+            float: left;  
+        }
+
+        #logo{
+            background-color: grey;
+            background-image: url('image/logo2.jpg');
+            background-size: cover;
+            background-position: center;  
+            width: 150px;
+            height: 150px;
+            margin: 75px auto 0;
+        }
+
+        #menu_list{
+            width: 150px;
+            height: 150px;
+            margin: 0px auto;  
+            margin-top: 55px;   /*280-75-150*/
+        }
+
+        li{
+            list-style-type:none;
+            margin: 20px auto;
+        }
+
+        /*右方圖片區塊*/
+        #imgage_block{
+            width: 955px;
+            height: 570px;
+            margin: 0 auto;
+            margin-top : calc(50vh - 285px);
+        }
+
+        #img_box_a {
+            background-color: grey;
+            background-image: url('image/A.jpg');
+            margin-right: 5px; 
+        }
+
+        #img_box_b{
+            background-color: lightgrey;
+            background-image: url('image/B.jpg');
+            margin-right: 5px; 
+        }
+        #img_box_c{
+            background-color: grey;
+            background-image: url('image/C.jpg');
+        }
+
+        .img_block_style{
+            background-size: cover;
+            background-position: center;  
+            width: 315px;
+            height: 100%;
+            float: left;
+        }
+
+        .mask {
+                background-color: rgba(0, 0, 0, 1);
+                width: 100%;
+                height: 100%;
+                transition: 1s;
+            }
+
+            .mask:hover {
+                background-color: rgba(0, 0, 0, 0.0);
+            }            
+
+            .mask:active {
+                background-color: rgba(0, 0, 0, 0.0);
+            }
+
+
+        /*===================================1280*1040====================================*/
+        @media (max-width:1320px) {
+            /*右方圖片區塊*/
+            #imgage_block{
+                width: 800px;
+                height: 570px;
+                margin: 0 auto;
+                /* background-color: red; */
+                margin-top : calc(50vh - 285px);    /* (570 / 2) */
+            }
+
+            #img_box_a {
+                background-color: grey;
+                width: 800px;
+                height: 285px;
+                margin-bottom: 10px;
+            }
+
+            #img_box_b{
+                background-color: lightgrey;
+                width: 395px;
+                height: 275px;
+                float: left;
+                margin-right: 10px;
+            }
+            #img_box_c{
+                background-color: grey;
+                float: left;
+                width: 395px;
+                height: 275px;
+            }
+
+        }
+
+
+         /*===================================768*1024(平板)====================================*/
+        @media (max-width:1165px) {
+            a {
+                text-decoration: underline;
+            }
+
+            #container{
+                width: 100%;
+                height: 100vh;
+            }
+
+            #menu_area {
+                width: 100%;
+                /* height:100px; */
+                height: unset;
+                background-color: lightgrey;
+            }
+            #content_area{
+                width: 100%;
+                height: calc(100vh - 100px);
+                background-color:white;
+            }
+
+            /*左方menu及LOGO*/
+            #menu_block {
+                width: 700px;
+                height:90px;
+                background-color: lightgrey;
+                margin: 0 auto 0 auto;
+                padding-top: 10px;
+                position: relative;
+                float: unset;
+            }
+
+            #logo{
+                margin: 0px;
+                padding: 0px;
+                background-color: grey;
+                width: 80px;
+                height: 80px;
+                float: left;
+            }
+
+            #menu_list{
+                margin: 0px;
+                width: unset;
+                height: 100px;
+                position: absolute;
+                right: 0px;
+            }
+            
+            li{
+                margin: 0px;
+                padding: 0px;
+                height: 20px;
+                line-height: 20px;
+                padding: 0px 10px;
+                float: left;
+                margin-top: 15px;
+                list-style-type:none;
+            }
+
+            /*右方圖片區塊*/
+
+            #imgage_block{
+                width: 700px;
+                height: 800px;
+                margin-top: 0;
+                margin: 0 auto;
+            }
+
+            #img_box_a {    
+                background-color: grey;
+                width: 700px;
+                height: 400px;
+                margin-bottom: 10px;
+            }
+
+            #img_box_b{
+                background-color: lightgrey;
+                width: 345px;
+                height: 390px;
+                float: left;
+                margin-right: 10px;
+            }
+            #img_box_c{
+                background-color: grey;
+                float: left;
+                width: 345px;
+                height: 390px;
+            }
+
+        } 
+
+         /*===================================375*667(手機)====================================*/  
+        @media (max-width:767px) {
+            a {
+                text-decoration: underline;
+            }
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            #container{
+                margin: 0 auto;
+                width: 100%;
+                height: unset;
+            }
+
+            #menu_area {
+                width: 100%;
+                height:50px;
+                background-color: lightgrey;
+                padding: 15px 0px 15px 0px;
+                height: 50px;
+            }
+            #content_area{
+                width: 100%;
+                background-color:white;
+            }
+
+            /*左方menu及LOGO*/
+            #menu_block {
+                width: 100%;
+                height: 80px;
+                position: unset;
+                padding-top: unset;
+            }
+            #menu_btn{
+                background-color: grey;
+                width: 30px;
+                height: 50px;
+                float: left;
+                margin-left: 20px;
+            }
+
+            #logo{
+                background-color: grey;
+                width: 50px;
+                height: 50px;
+                margin: 0px auto 0px auto;
+                position: relative;
+                float: unset;
+            }
+
+        
+            #menu_list{
+                width: 100px;
+                display: none;   
+                right: unset;
+                /* position: absolute; */
+            }
+    
+            ul{
+                padding: 0;
+                margin: 0;
+                margin-left: 20px;
+            }
+
+            li{
+                height: 20px;
+                line-height: 20px;
+                padding: 0px 10px;
+                float: left;;
+                margin-top: 5px;
+                list-style-type:none;
+            }
+
+            /*右方圖片區塊*/
+
+            #imgage_block{
+                width: 100%;
+                height: 587px;
+                margin: 0 auto;
+            }
+
+            #img_box_a {    
+                width: 100%;
+                height: 196px;
+                margin-bottom: unset;
+            }
+
+            #img_box_b{
+               width: 100%;
+                height: 196px;
+                margin-bottom: unset;
+                margin-right: 10px;
+            }
+            #img_box_c{
+               width: 100%;
+                height: 195px;
+            }
+
+            #menu_btn:hover~#menu_list{
+                display: block;
+            }
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div id="container">
+        <div id="menu_area">
+            <div id="menu_block">
+                <div id="menu_btn" class="mobile"></div>
+                <div id="logo"></div>
+                <div id="menu_list" class="pc clearfix">
+                   <ul class="menu">
+                       <li><a href="#">AAAAA</a></li>
+                       <li><a href="#">BBBBB</a></li>
+                       <li><a href="#">CCCCC</a></li>
+                   </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="content_area">
+            <div id="imgage_block">
+                <div id="img_box_a" class="img_block_style">
+                    <div id="img_mask_a" class="mask"></div> 
+                </div>
+                <div id="img_box_b" class="img_block_style">
+                    <div id="img_mask_a" class="mask"></div> 
+                </div>
+                <div id="img_box_c" class="img_block_style">
+                    <div id="img_mask_a" class="mask"></div> 
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>

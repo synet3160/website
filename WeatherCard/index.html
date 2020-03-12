@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-TW"">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body最外層需要對container 做dipaly:flex
+            水平對齊：justify-content: center;
+            垂直對齊：align-items: center;        
+         */
+        body{
+            background-color: lightblue;
+            margin: 0;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .current_Data{
+            font-size: 48px;
+            margin: 20px auto;
+            font-weight: 600;
+        }
+        h2{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            font-weight: bold;
+            color:black;
+            text-align: center;  
+
+        } 
+
+         .container{
+            /* flex-direction: column; */
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cards{ 
+            margin: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card_img{            
+           max-height:160px;
+           margin: 40px;
+            }
+
+        img {
+            width: 100%;
+            /* width:50%; */
+        } 
+
+        .card_content {
+            margin: 10px 10px;
+            text-align: center;
+        } 
+
+        .temperature{
+            display: flex;
+            flex-direction: column;
+            }
+
+        .card{
+            width: 20%;
+            min-height: 350px;
+            background-size: cover;
+            border-radius: 20px 20px;
+            border: 2px solid black;
+            margin: 15px 10px;
+        }
+
+        h5{
+            /* width: 100%; */
+            /* min-height: 500px; */
+            padding: 0 0 100px 0;
+            font-size: 12px ;
+            height: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="current_Data">
+        </div>
+        
+         <div class="cards">
+
+
+            <!-- <div class="card">
+                <div class="card_img">
+                    <img src="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/01.svg" alt="tea">
+                </div>
+                <h2 class="location">台中市</h2>
+                <h2 class="weather">多雲到晴</>
+                <div class="temperature">
+                    <span class="temperature_High">最高溫：25C</span>
+                    <span class="temperature_Low">最低溫：12C</span>
+                </div>
+                <div class="remark">說明</div>
+            </div>
+            <div class="card">
+                <div class="card_img">
+                    <img src="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/04.svg" alt="tea">
+                </div>
+                <h1 class="location">台中市</h1>
+                <h2 class="weather">多雲到晴</p>
+                <div class="temperature">
+                    <span class="temperature_High">最高溫：25C</span>
+                    <span class="temperature_Low">最低溫：12C</span>
+                </div>
+                <div class="remark">說明</div>
+            </div>
+            <div class="card">
+                <div class="card_img">
+                    <img src="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/night/08.svg" alt="tea">
+                </div>
+                <h1 class="location">台中市</h1>
+                <h2 class="weather">多雲到晴</p>
+                <div class="temperature">
+                    <span class="temperature_High">最高溫：25C</span>
+                    <span class="temperature_Low">最低溫：12C</span>
+                </div>
+                <div class="remark">說明</div>
+            </div>
+            <div class="card">
+                <div class="card_img">
+                    <img src="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/02.svg" alt="晴時多雲"">
+                </div>
+                <h1 class="location">台中市</h1>
+                <h2 class="weather">多雲到晴</p>
+                <div class="temperature">
+                    <span class="temperature_High">最高溫：25C</span>
+                    <span class="temperature_Low">最低溫：12C</span>
+                </div>
+                <div class="remark">說明</div>
+            </div> -->
+
+        </div>
+
+        <script>
+            fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-E3245950-99AA-4F56-96FF-0C68E5D73B7B')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(weaterData) {
+
+                var weather = document.querySelector(".container")
+                var locations = weaterData.records.location
+
+
+                locations.forEach(location => {
+                    var location_Name = location.locationName                                                   //地區
+                    var location_Wx = location.weatherElement[0].time[0].parameter.parameterName                //天氣狀況
+                    var location_Wx_code = location.weatherElement[0].time[0].parameter.parameterValue          //天氣狀況代碼
+                    var location_Max_T = location.weatherElement[4].time[0].parameter.parameterName             //最高溫
+                    var location_Max_T_Unit = location.weatherElement[4].time[0].parameter.parameterUnit        //最高溫單位
+                    var location_Min_T = location.weatherElement[2].time[0].parameter.parameterName             //最低溫
+                    var location_Min_T_Unit = location.weatherElement[2].time[0].parameter.parameterUnit        //最低溫單位
+                    
+                    var location_Ci = location.weatherElement[3].time[0].parameter.parameterName                //舒適度
+
+                    if (location_Wx_code == '1' || location_Wx_code == '2' || location_Wx_code == '3' || location_Wx_code == '4' || location_Wx_code == '5' || location_Wx_code == '6' 
+                        || location_Wx_code == '7' || location_Wx_code == '8' || location_Wx_code == '9') {
+                        weather_icon="img/0"+location_Wx_code+".svg"               
+                        // weather_icon="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/0"+location_Wx_code+".svg"
+                    } else  {
+                        weather_icon="img/"+location_Wx_code+".svg"
+                        // weather_icon="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/"+location_Wx_code+".svg"
+                    }
+
+
+                    weather.innerHTML +=
+                    `
+                    <div class="card">
+                        <div class="card_img">
+                            <img src=${weather_icon} alt="tea" height= 60px>
+                        </div>
+                        <h2 class="location">${location_Name}</h2>
+                        <div class="card_content">
+                            <h3 class="weather">～ ${location_Wx} ～</h3>
+                            <h4 class="temperature">
+                                <span class="temperature_High">最高溫：${location_Max_T}<sup>○</sup>${location_Max_T_Unit}</span>
+                                <span class="temperature_Low">最低溫：${location_Min_T}<sup>○</sup>${location_Min_T_Unit}</span>
+                            </h4>
+                            </h5 class="remark">${location_Ci}</h5>
+                        </div>
+                    </div>
+                    `
+                });
+
+                var today = new Date()
+                var currentDay = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+ today.getDate() +'日'
+                var currentTime = today.getHours()+":"+today.getMinutes()
+                console.log(currentDay+currentTime)
+
+                var time = document.querySelector(".current_Data")
+
+                time.innerHTML +=
+                    `
+                    現在時間：${currentDay}${currentTime}
+
+                    `
+            });
+        
+        </script>
+
+</body>
+</html>

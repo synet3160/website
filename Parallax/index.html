@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body{
+            /* background-image: url("/image/body_bg_img3.jpg");*/
+            background-color: lightgrey;
+            margin: 0px;
+        }
+        #container{
+            background-color: lightred;
+            width: 80%;
+            height: 300vh;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+
+        }
+        /*三*/
+        #img_sec1{
+            /* background-color: gray; */
+            background-image: url("image/banner.jpg");
+            background-size: cover;
+            background-position: top;
+            background-attachment: fixed;
+            width: 100%;
+            height: 50vh;
+            padding-top: 50vh;
+        }
+        #img_sec2{
+            background-image: url("image/ha.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            width: 100%;
+            height: 50vh;
+            padding-top: 50vh;
+        }
+        #img_sec3{
+            /*  */
+            background-image: url("image/tea.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            width: 100%;
+            height: 50vh;
+            padding-top: 50vh;
+        }
+
+        .section{
+            background-color: rgba(0, 0, 0, 0.5);
+            /* margin-top: 50vh; */
+            width: 100%;
+            height: calc(25vh + 50px);
+            float: left; 
+            padding-top: calc(25vh - 50px);
+        } 
+        .btn_color{
+            background-color: green;
+            width: 200px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: 1s;
+            /* margin-top: calc(25vh - 50px); */
+        }
+
+        .btn_color:hover{
+            background-color: red;
+            transition: 1s;
+            /* margin-top: calc(25vh - 50px); */
+        }        
+        /*圓形人像或Logo*/
+        #avatar{
+                width: 140px;
+                height: 140px;
+                background-color: lightcyan;
+                /* position: absolute; */
+                position: fixed;                        /*需要釘死在畫面左上角*/
+                left: calc(10% + 20px);                 /*固定左邊(100-80)/2 +左邊界 */
+                top: 30px;
+                border-radius: 80px;
+                border-style: solid;
+                border-width: 4px;
+                border-color: white;
+                box-shadow:3px 3px 15px black; padding:4px;
+                float: left;
+                opacity: 0.7;       /*透明度*/
+            }
+
+        #btn_group{
+            /* background-color: honeydew; */
+            background-position: fixed;
+            /* width: 300px; */
+            height: 30px;
+            position: fixed;
+            right: calc(10% + 20px);
+            top: 100px;
+            float: left;
+        }
+        /* 省略Butoon的id , 改用class 一次設定 */
+        .btn_class{
+            background-color:lightgray;
+            height: 30px;
+            line-height: 30px;
+            padding: 0px 30px;
+            float: left;
+            border: 1px solid gray;
+            margin-right: 5px;
+        }
+
+        .btn_class:hover{
+            background-color: red;
+        }
+        .btn_class:active{
+            background-color: black;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+  
+    <div id="container">
+        <div id="avatar"></div>
+        <div id="btn_group">
+            <!-- <div  class="btn_class"><a href="#img_sec1">A</a></div>
+            <div  class="btn_class"><a href="#img_sec2">B</a></div>
+            <div  class="btn_class"><a href="#img_sec3">C</a></div> -->
+            <a href="#img_sec1"><div  class="btn_class">A</div></a>
+            <a href="#img_sec2"><div  class="btn_class">B</div></a>
+            <a href="#img_sec3"><div  class="btn_class">C</div></a>
+        </div>
+    
+        <div id="img_sec1">
+            <div  class="section">
+                <div  class="btn_color"></div>
+            </div>
+        </div>
+
+        <div id="img_sec2">
+            <div  class="section">
+                <div  class="btn_color"></div>
+            </div>
+        </div>
+
+        <div id="img_sec3">
+            <div class="section">
+                <div class="btn_color"></div>
+            </div>
+        </div>
+    </div>    
+
+
+</body>
+</html>

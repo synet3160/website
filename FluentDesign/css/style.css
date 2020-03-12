@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+
+.white-color {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: unset;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_flex_start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container_width {
+    width:88vw;
+    margin: 0 auto;
+}
+
+h2{
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    color: rgb(79, 229, 255);
+    font-size: 64px;
+    font-weight: 600;
+    margin: 0px 0px 0px -6px;
+    line-height: 80px;
+}
+
+/* 以上為共用資料 */
+.head_container {
+    width: 100%;
+    height: 48px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.head {
+/* background-color: grey; */
+    width: 88vw;
+    height: 48px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 600;
+}
+
+.logo{
+    /* width: 16px;
+    height: 16px; */
+    color: white;
+    /* margin: 0 3% 0 0; */
+}
+.fluent{
+    margin: 0 140px 0 0;
+}
+
+.nav_bar{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 100px 0 0 ;
+}
+.fluent:hover{
+    color: rgb(0, 120, 212);
+}
+
+.head_nav_link1:hover {
+    color: rgb(37, 142, 222)
+}
+.head_nav_link2:hover {
+    color: rgb(79, 229, 255);
+}
+.head_nav_link3:hover {
+    color:rgb(207, 143, 255);
+}
+.head_nav_link4:hover {
+    color: rgb(105, 229, 110);
+}
+
+
+.nav-item {
+    list-style: none;
+}
+
+
+
+
+.main_container{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.sec01_container{
+    width: 100vw;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.sec01 {
+    width: 88vw;
+    height: 130vh;
+    background-color: black;
+}
+.sec_01_right{
+    margin: 0 0 0 15%;
+    flex-direction: row;
+    
+}
+.rightLine{
+    align-self: flex-start;
+    position: absolute;
+    top: 170px;
+    right:8vw;
+}
+
+.midPicture{
+    align-self: flex-start;
+    position: absolute;
+    top:190px;
+    right:24vw;
+}
+
+.leftLine{
+    align-self: flex-end;
+    position: absolute;
+    top: 560px;
+    right:55vw;
+}
+
+
+.sec01_right{
+    width: 410px;
+    height: 80vh;
+    position: absolute;
+    top: 25vh;
+}
+
+.sec01_content{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 100px 0px 30px;
+}
+
+.sec02{
+    width: 100vw;
+    height: 50vh;
+}
+
+.sec02_container{
+    width: 50vw;
+    margin: 0 auto;
+}
+
+
+
+.sec03{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/msft-verge-fluent.jpg");
+    background-position: cover;
+    background-attachment: fixed;
+}
+
+.sec04{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.sec05{
+    width: 100vw;
+    height: 30vh;
+    background-color: black;
+}
+
+.sec06{
+    width: 100vw;
+    height: 70vw;
+    flex-direction: row;
+}
+.sec07{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/clouds.jpg");
+    background-position: cover;
+    background-attachment: fixed;  
+    display: flex;
+    justify-content: row;
+}
+
+.sec08{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgrey;
+    background-position: cover;
+    background-attachment: fixed;  
+    display: flex;
+    justify-content: row;
+}
+
+.sec09{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/space.jpg");
+    background-position: cover;
+    background-attachment: fixed;  
+    display: flex;
+    justify-content: row;
+}
+.sec10{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/space.jpg");
+    background-position: cover;
+    background-attachment: fixed;  
+    display: flex;
+    justify-content: row;
+}
+
+.sec11{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url("../img/space.jpg"); */
+    background-position: cover;
+    background-attachment: fixed;  
+    display: flex;
+    justify-content: row;
+}
