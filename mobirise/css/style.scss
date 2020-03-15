@@ -1,0 +1,105 @@
+body {
+    backface-visibility: hidden;
+    background: #f8f8f8;
+    color: #5c5c5c;
+    font-size: 14px;
+    font-family: '游明朝', 'Yu Mincho', YuMincho, serif;
+    font-weight: normal;
+    letter-spacing: .04em;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    min-width: 1200px;
+    opacity: 0;
+}
+
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+nav {
+    display: block;
+}
+
+#gnavi_btn {
+    cursor: pointer;
+    height: 120px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 120px;
+	z-index: 101;
+	
+	span {
+		background: #333;
+		display: block;
+		height: 1px;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translateX(-50%);
+		transition: all .4s cubic-bezier(.3,0,.15,1);
+		width: 45px;
+
+		&::before, &::after {
+			background: #333;
+			bottom: 0;
+			content: '';
+			display: block;
+			height: 1px;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			top: -9px;
+			transition: all .5s cubic-bezier(.3,0,.15,1);
+			width: 100%;
+
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+#gnavi.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+#gnavi {
+    background: rgba(248,248,248,.95);
+    left: 0;
+    opacity: 0;
+    padding: 120px 120px 75px;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    z-index: 100;
+	transition: all 1s cubic-bezier(0,0,0,1);
+	
+	.vertical {
+		border-left: 1px solid #e6e6e6;
+		height: 180px;
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		transform: translateY(-20px);
+		transition: all 1s cubic-bezier(0,0,0,1);
+	}
+
+
+}
+
+
+.cid-rThV7RsBn0{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
