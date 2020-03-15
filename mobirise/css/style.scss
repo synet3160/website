@@ -9,7 +9,12 @@ body {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     min-width: 1200px;
-    opacity: 0;
+	opacity: 0;
+	
+	@media screen and (max-width: 768px){
+		font-size: 12px;
+		min-width: auto;
+	}
 }
 
 img.wp-smiley,
@@ -69,11 +74,15 @@ nav {
 	}
 }
 
-#gnavi.open {
-    opacity: 1;
-    visibility: visible;
-}
 
+#gnavi.open {
+	opacity: 1;
+	visibility: visible;
+
+	.lesson, .communicate {
+		transform: translateY(0);
+	}
+}
 #gnavi {
     background: rgba(248,248,248,.95);
     left: 0;
@@ -84,22 +93,260 @@ nav {
     visibility: hidden;
     z-index: 100;
 	transition: all 1s cubic-bezier(0,0,0,1);
+
+
+	ul{
+		li{
+			list-style: none;
+
+			img {
+				margin-right: 5px;
+				padding-bottom: 2px;
+			}
+		}
+	}
 	
 	.vertical {
 		border-left: 1px solid #e6e6e6;
-		height: 180px;
+		height: 200px;
 		-webkit-writing-mode: vertical-rl;
 		-ms-writing-mode: tb-rl;
 		writing-mode: vertical-rl;
 		transform: translateY(-20px);
 		transition: all 1s cubic-bezier(0,0,0,1);
+
+		li{
+			display: list-item;
+			border-right: 1px solid #e6e6e6;
+			font-size: 121.4%;
+			letter-spacing: .2em;
+			line-height: 50px;
+			text-indent: 10px;
+
+
+			&::before, &::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
 	}
+
+	.lesson {
+		margin-top: 60px;
+		transform: translateY(-40px);
+		letter-spacing: .1em;
+		text-align: center;
+		transition: all 1s cubic-bezier(0,0,0,1);
+		width: 417px;
+
+		ul{
+			ol{
+				list-style: none;
+			}
+		}
+
+		li {
+			background: #fff;
+			font-size: 103.6%;
+			font-weight: bold;
+			line-height: 50px;
+			display: list-item;
+
+			a{
+				display: block;
+			}
+		}
+
+		.login {
+			background: #333;
+			color: #fff;
+		}
+	}
+
+	.communicate {
+		margin-top: 20px;
+		letter-spacing: .1em;
+		text-align: center;
+		transition: all 1s cubic-bezier(0,0,0,1);
+		width: 417px;
+
+		ul{
+			display: block;
+			margin-block-start: 1em;
+			margin-block-end: 1em;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+			padding-inline-start: 40px;
+
+			ol{
+				list-style: none;
+			}
+		}
+
+		li {
+			border-bottom: 1px solid #e6e6e6;
+			font-size: 107.1%;
+			line-height: 60px;
+			display: list-item;
+
+			li:last-child {
+				font-size: 93.3%;
+			}
+
+			a{
+				color: #333;
+				text-decoration: none;
+				transition: all 1s cubic-bezier(0,0,0,1);
+				display: block;
+
+				img {
+					max-width: 100%;
+					vertical-align: middle;
+				}
+
+
+			}
+		}
+	}
+
+	.facebook img {
+		width: 12px;
+	}
+
+	.instagram img {
+		width: 18px;
+	}
+
+}
+
+#lnavi {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .6s cubic-bezier(.3,0,.15,1);
+	z-index: 99;
+	
+	.lesson {
+		margin-top: 180px;
+
+		.vertical {
+			left: 120px;
+		}
+	}
+
+	ul, ol {
+		list-style: none;
+	}
+
+	ul {
+		display: block;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		padding-inline-start: 40px;
+	}
+
+	li {
+		font-size: 96.4%;
+		font-weight: bold;
+
+		.login {
+			background: #333;
+			color: #fff;
+		}
+
+		a {
+			// background: #fff;
+			display: block;
+			padding: 30px 0 25px 35px;
+			transform: translateX(-35px);
+			transition: all .6s cubic-bezier(.3,0,.15,1);
+			text-decoration: none;
+			cursor: pointer;
+
+
+			.vertical {
+				display: inline-block;
+				writing-mode: vertical-rl;
+			}
+
+			span {
+				padding: 0 15px;
+
+				&::before{
+					background: #fff;
+					bottom: 30px;
+					height: 1px;
+					left: 20px;
+					width: 15px;
+					display: block;
+					content: '';
+					position: absolute;
+					transition: all .4s cubic-bezier(.3,0,.15,1);
+				}
+	
+				&::after{
+					background: #fff;
+					bottom: 32px;
+					height: 1px;
+					left: 29px;
+					transform: rotate(45deg);
+					width: 6px;
+				}
+
+			}
+
+		}
+
+		a.login::before {
+			background: #fff;
+			bottom: 30px;
+			height: 1px;
+			left: 20px;
+			width: 15px;
+		}
+		a.login::after{
+			background: #fff;
+			display: block;
+			content: '';
+			position: absolute;
+			transition: all .4s cubic-bezier(.3,0,.15,1);
+		}
+	}
+
 
 
 }
 
-
 .cid-rThV7RsBn0{
 	padding-top: 50px;
 	padding-bottom: 50px;
+
+	#header .logo {
+		line-height: 240px;
+		text-align: center;
+	}
+
+	a {
+		color: #333;
+		text-decoration: none;
+		transition: all 1s cubic-bezier(0,0,0,1);
+		cursor: pointer;
+
+		hover{
+			opacity: .5;
+		}
+
+		img {
+			width: 78px;
+			max-width: 100%;
+			vertical-align: middle;
+		}
+	}
+
+
 }

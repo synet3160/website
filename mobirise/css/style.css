@@ -14,6 +14,13 @@ body {
   opacity: 0;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+    min-width: auto;
+  }
+}
+
 img.wp-smiley,
 img.emoji {
   display: inline !important;
@@ -80,6 +87,11 @@ nav {
   visibility: visible;
 }
 
+#gnavi.open .lesson, #gnavi.open .communicate {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 #gnavi {
   background: rgba(248, 248, 248, 0.95);
   left: 0;
@@ -93,9 +105,18 @@ nav {
   transition: all 1s cubic-bezier(0, 0, 0, 1);
 }
 
+#gnavi ul li {
+  list-style: none;
+}
+
+#gnavi ul li img {
+  margin-right: 5px;
+  padding-bottom: 2px;
+}
+
 #gnavi .vertical {
   border-left: 1px solid #e6e6e6;
-  height: 180px;
+  height: 200px;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
@@ -105,8 +126,247 @@ nav {
   transition: all 1s cubic-bezier(0, 0, 0, 1);
 }
 
+#gnavi .vertical li {
+  display: list-item;
+  border-right: 1px solid #e6e6e6;
+  font-size: 121.4%;
+  letter-spacing: .2em;
+  line-height: 50px;
+  text-indent: 10px;
+}
+
+#gnavi .vertical li::before, #gnavi .vertical li::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#gnavi .lesson {
+  margin-top: 60px;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  letter-spacing: .1em;
+  text-align: center;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+  width: 417px;
+}
+
+#gnavi .lesson ul ol {
+  list-style: none;
+}
+
+#gnavi .lesson li {
+  background: #fff;
+  font-size: 103.6%;
+  font-weight: bold;
+  line-height: 50px;
+  display: list-item;
+}
+
+#gnavi .lesson li a {
+  display: block;
+}
+
+#gnavi .lesson .login {
+  background: #333;
+  color: #fff;
+}
+
+#gnavi .communicate {
+  margin-top: 20px;
+  letter-spacing: .1em;
+  text-align: center;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+  width: 417px;
+}
+
+#gnavi .communicate ul {
+  display: block;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+}
+
+#gnavi .communicate ul ol {
+  list-style: none;
+}
+
+#gnavi .communicate li {
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 107.1%;
+  line-height: 60px;
+  display: list-item;
+}
+
+#gnavi .communicate li li:last-child {
+  font-size: 93.3%;
+}
+
+#gnavi .communicate li a {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+  display: block;
+}
+
+#gnavi .communicate li a img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+#gnavi .facebook img {
+  width: 12px;
+}
+
+#gnavi .instagram img {
+  width: 18px;
+}
+
+#lnavi {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  z-index: 99;
+}
+
+#lnavi .lesson {
+  margin-top: 180px;
+}
+
+#lnavi .lesson .vertical {
+  left: 120px;
+}
+
+#lnavi ul, #lnavi ol {
+  list-style: none;
+}
+
+#lnavi ul {
+  display: block;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+}
+
+#lnavi li {
+  font-size: 96.4%;
+  font-weight: bold;
+}
+
+#lnavi li .login {
+  background: #333;
+  color: #fff;
+}
+
+#lnavi li a {
+  display: block;
+  padding: 30px 0 25px 35px;
+  -webkit-transform: translateX(-35px);
+          transform: translateX(-35px);
+  -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#lnavi li a .vertical {
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+#lnavi li a span {
+  padding: 0 15px;
+}
+
+#lnavi li a span::before {
+  background: #fff;
+  bottom: 30px;
+  height: 1px;
+  left: 20px;
+  width: 15px;
+  display: block;
+  content: '';
+  position: absolute;
+  -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
+}
+
+#lnavi li a span::after {
+  background: #fff;
+  bottom: 32px;
+  height: 1px;
+  left: 29px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 6px;
+}
+
+#lnavi li a.login::before {
+  background: #fff;
+  bottom: 30px;
+  height: 1px;
+  left: 20px;
+  width: 15px;
+}
+
+#lnavi li a.login::after {
+  background: #fff;
+  display: block;
+  content: '';
+  position: absolute;
+  -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
+}
+
 .cid-rThV7RsBn0 {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.cid-rThV7RsBn0 #header .logo {
+  line-height: 240px;
+  text-align: center;
+}
+
+.cid-rThV7RsBn0 a {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.cid-rThV7RsBn0 a hover {
+  opacity: .5;
+}
+
+.cid-rThV7RsBn0 a img {
+  width: 78px;
+  max-width: 100%;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */
