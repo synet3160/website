@@ -418,4 +418,85 @@ nav {
 
 }
 
+#abuot{
+    margin-top: 150px;
+	width: 500px;
+	position: relative;
+
+
+	.lead {
+		font-size: 121.4%;
+		letter-spacing: .2em;
+		line-height: 2.28;
+
+
+	}
+
+
+	a {
+		color: #333;
+		text-decoration: none;
+		transition: all 1s cubic-bezier(0,0,0,1);
+	}
+	p {
+		margin-top: 60px;
+	}
+
+
+	.more{
+		color: #333;
+		text-decoration: none;
+		transition: all 1s cubic-bezier(0,0,0,1);
+		cursor: pointer;
+
+		display: inline-block;
+		font-weight: bold;
+		line-height: 1.5;
+		overflow: hidden;
+		padding-bottom: 0px;
+		position: relative;
+
+
+		&:hover{
+			opacity: 1;
+
+			&::before{
+				left:0%;
+			
+			}
+			&::after{
+				right: -200%;
+			}
+		}
+
+		&::before {
+			background: #333;
+			bottom: 1px;
+			content: '';
+			display: block;
+			height: 1px;
+			left: -200%;
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			transition: all .6s cubic-bezier(.3,0,.15,1);
+
+		}
+
+		&::after{
+			background: #333;
+			bottom: 1px;
+			content: '';
+			display: block;
+			height: 1px;
+			right: 0%;
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			transition: all .6s cubic-bezier(.3,0,.15,1);
+		}	
+	}
+}
+
+
 

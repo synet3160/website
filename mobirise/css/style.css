@@ -435,4 +435,81 @@ nav {
   -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
   transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
 }
+
+#abuot {
+  margin-top: 150px;
+  width: 500px;
+  position: relative;
+}
+
+#abuot .lead {
+  font-size: 121.4%;
+  letter-spacing: .2em;
+  line-height: 2.28;
+}
+
+#abuot a {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+}
+
+#abuot p {
+  margin-top: 60px;
+}
+
+#abuot .more {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.5;
+  overflow: hidden;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+#abuot .more:hover {
+  opacity: 1;
+}
+
+#abuot .more:hover::before {
+  left: 0%;
+}
+
+#abuot .more:hover::after {
+  right: -200%;
+}
+
+#abuot .more::before {
+  background: #333;
+  bottom: 1px;
+  content: '';
+  display: block;
+  height: 1px;
+  left: -200%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+}
+
+#abuot .more::after {
+  background: #333;
+  bottom: 1px;
+  content: '';
+  display: block;
+  height: 1px;
+  right: 0%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+}
 /*# sourceMappingURL=style.css.map */
