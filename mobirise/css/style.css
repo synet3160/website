@@ -369,4 +369,70 @@ nav {
   max-width: 100%;
   vertical-align: middle;
 }
+
+.news p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.news a {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+}
+
+.news .more {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  overflow: hidden;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.news .more:hover {
+  opacity: 1;
+}
+
+.news .more:hover::before {
+  left: 0%;
+}
+
+.news .more:hover::after {
+  right: -200%;
+}
+
+.news .more::before {
+  background: #333;
+  bottom: 1px;
+  content: '';
+  display: block;
+  height: 1px;
+  left: -200%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+}
+
+.news .more::after {
+  background: #333;
+  bottom: 1px;
+  content: '';
+  display: block;
+  height: 1px;
+  right: 0%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+}
 /*# sourceMappingURL=style.css.map */
