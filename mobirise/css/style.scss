@@ -378,7 +378,7 @@ nav {
 
 		&:hover{
 			opacity: 1;
-
+			
 			&::before{
 				left:0%;
 			
@@ -423,15 +423,11 @@ nav {
 	width: 500px;
 	position: relative;
 
-
-	.lead {
-		font-size: 121.4%;
-		letter-spacing: .2em;
-		line-height: 2.28;
-
-
-	}
-
+	// .lead {
+	// 	font-size: 121.4%;
+	// 	letter-spacing: .2em;
+	// 	line-height: 2.28;
+	// }
 
 	a {
 		color: #333;
@@ -462,14 +458,18 @@ nav {
 
 			&::before{
 				left:0%;
+				
 			
 			}
-			&::after{
-				right: -200%;
-			}
+			// &::after{
+			// 	right: -200%;
+			// }
 		}
 
 		&::before {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
 			background: #333;
 			bottom: 1px;
 			content: '';
@@ -483,18 +483,21 @@ nav {
 
 		}
 
-		&::after{
-			background: #333;
-			bottom: 1px;
-			content: '';
-			display: block;
-			height: 1px;
-			right: 0%;
-			overflow: hidden;
-			position: absolute;
-			width: 100%;
-			transition: all .6s cubic-bezier(.3,0,.15,1);
-		}	
+		// &::after{
+		// 	box-sizing: border-box;
+		// 	margin: 0;
+		// 	padding: 0;
+		// 	background: #333;
+		// 	bottom: 1px;
+		// 	content: '';
+		// 	display: block;
+		// 	height: 1px;
+		// 	right: 0%;
+		// 	overflow: hidden;
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	transition: all .6s cubic-bezier(.3,0,.15,1);
+		// }	
 	}
 }
 
