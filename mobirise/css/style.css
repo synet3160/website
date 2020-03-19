@@ -22,52 +22,91 @@ body {
 }
 
 img.wp-smiley,
-img.emoji {
-  display: inline !important;
-  border: none !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  height: 1em !important;
-  width: 1em !important;
-  margin: 0 .07em !important;
-  vertical-align: -0.1em !important;
-  background: none !important;
-  padding: 0 !important;
-}
-
 #lnavi {
   position: fixed;
-  left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
   transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
   z-index: 99;
+  margin-top: 90px;
 }
 
-#lnavi li a {
-  background: #fff;
+img.wp-smiley ul li,
+#lnavi ul li {
+  font-size: 96.4%;
+  font-weight: bold;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+img.wp-smiley ul li a,
+#lnavi ul li a {
   display: block;
   padding: 30px 0 25px 35px;
   -webkit-transform: translateX(-35px);
           transform: translateX(-35px);
   -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
   transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+  text-decoration: none;
+  background: #fff;
 }
 
-#lnavi .banner-lesson {
-  margin-top: 180px;
-}
-
-#lnavi .banner-lesson a {
+img.wp-smiley ul li a::before,
+#lnavi ul li a::before {
+  bottom: 30px;
+  height: 1px;
+  left: 20px;
+  width: 15px;
   display: block;
-  padding: 30px 0 25px 35px;
+  content: '';
+  position: absolute;
+  -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
 }
 
-#lnavi .banner-lesson .login {
+img.wp-smiley ul li a::after,
+#lnavi ul li a::after {
+  bottom: 32px;
+  height: 1px;
+  left: 29px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 6px;
+  display: block;
+  content: '';
+  position: absolute;
+  -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
+}
+
+img.wp-smiley ul li a span,
+#lnavi ul li a span {
+  padding: 0 15px;
+}
+
+img.wp-smiley ul li a span .vertical,
+#lnavi ul li a span .vertical {
+  left: 120px;
+}
+
+img.wp-smiley ul li a .login,
+#lnavi ul li a .login {
   background: #333;
   color: #fff;
+}
+
+img.wp-smiley ul li a:hover,
+#lnavi ul li a:hover {
+  opacity: .5;
+}
+
+img.wp-smiley ul li a.login:hover,
+#lnavi ul li a.login:hover {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 #gnavi_btn {
@@ -94,7 +133,7 @@ img.emoji {
   width: 45px;
 }
 
-#gnavi_btn span::before, #gnavi_btn span::after {
+#gnavi_btn span::before {
   background: #333;
   bottom: 0;
   content: '';
@@ -107,10 +146,21 @@ img.emoji {
   -webkit-transition: all 0.5s cubic-bezier(0.3, 0, 0.15, 1);
   transition: all 0.5s cubic-bezier(0.3, 0, 0.15, 1);
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+#gnavi_btn span::after {
+  top: 9px;
+  width: 44.4%;
+  background: #333;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transition: all 0.5s cubic-bezier(0.3, 0, 0.15, 1);
+  transition: all 0.5s cubic-bezier(0.3, 0, 0.15, 1);
 }
 
 #gnavi.open {
@@ -119,6 +169,11 @@ img.emoji {
 }
 
 #gnavi.open .lesson, #gnavi.open .communicate {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#gnavi.open .vertical {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -136,6 +191,17 @@ img.emoji {
   transition: all 1s cubic-bezier(0, 0, 0, 1);
 }
 
+#gnavi .lesson, #gnavi .communicate {
+  margin-top: 20px;
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  letter-spacing: .1em;
+  text-align: center;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+  width: 417px;
+}
+
 #gnavi ul li {
   list-style: none;
 }
@@ -146,11 +212,12 @@ img.emoji {
 }
 
 #gnavi .vertical {
+  display: inline-block;
   border-left: 1px solid #e6e6e6;
   height: 200px;
   -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);

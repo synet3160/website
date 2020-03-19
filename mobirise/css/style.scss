@@ -18,17 +18,17 @@ body {
 }
 
 img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
+// img.emoji {
+// 	display: inline !important;
+// 	border: none !important;
+// 	box-shadow: none !important;
+// 	height: 1em !important;
+// 	width: 1em !important;
+// 	margin: 0 .07em !important;
+// 	vertical-align: -0.1em !important;
+// 	background: none !important;
+// 	padding: 0 !important;
+// }
 
 	// nav {
 	//     display: block;
@@ -37,43 +37,98 @@ img.emoji {
 
 #lnavi{
 	position: fixed;
-    left: 0;
+
     top: 50%;
     transform: translateY(-50%);
     transition: all .6s cubic-bezier(.3,0,.15,1);
-    z-index: 99;
+	z-index: 99;
+	margin-top: 90px;
 
+	ul{
+		// list-style: none;
+		// margin-top: 180px;
+		// margin-block-start: 1em;
+		// margin-block-end: 1em;
+		// margin-inline-start: 0px;
+		// margin-inline-end: 0px;
+		// padding-inline-start: 40px;
 
+		li{
+			font-size: 96.4%;
+			font-weight: bold;
+			display: list-item;
+			text-align: -webkit-match-parent;
+			
+			a{
+				display: block;
+				padding: 30px 0 25px 35px;
+				transform: translateX(-35px);
+				transition: all .6s cubic-bezier(.3,0,.15,1);
+				text-decoration: none;
+				background: #fff;
 
+				&::before{
+					bottom: 30px;
+					height: 1px;
+					left: 20px;
+					width: 15px;
+					display: block;
+					content: '';
+					position: absolute;
+					transition: all .4s cubic-bezier(.3,0,.15,1);
+				}
 
-	li{
-		a{
-			background: #fff;
-			display: block;
-			padding: 30px 0 25px 35px;
-			transform: translateX(-35px);
-			transition: all .6s cubic-bezier(.3,0,.15,1);
+				&::after{
+					bottom: 32px;
+					height: 1px;
+					left: 29px;
+					transform: rotate(45deg);
+					width: 6px;
+					display: block;
+					content: '';
+					position: absolute;
+					transition: all .4s cubic-bezier(.3,0,.15,1);
+				}
+
+				span {
+					padding: 0 15px;
+
+					.vertical {
+						left: 120px;
+					}
+				}
+
+				.login{
+					background: #333;
+					color: #fff;
+				}
+			}
+
+			a:hover {
+				opacity: .5;
+			}
+
+			a.login:hover {
+				opacity: 1;
+				transform: translateX(0);
+			}
 		}
 	}
 
 
-	.banner-lesson{
-		margin-top: 180px;
+	// .banner-lesson{
+	// 	margin-top: 180px;
 
-		a{
-			display: block;
-			padding: 30px 0 25px 35px;
-		}
+	// 	a{
+	// 		display: block;
+	// 		padding: 30px 0 25px 35px;
+	// 	}
 
-		.login{
-			background: #333;
-			color: #fff;
-
-		}
-	}
-
-
-
+	// 	.login{
+	// 		background: #333;
+	// 		color: #fff;
+	// 	}
+	// }
 
 }
 
@@ -99,7 +154,7 @@ img.emoji {
 		transition: all .4s cubic-bezier(.3,0,.15,1);
 		width: 45px;
 
-		&::before, &::after {
+		&::before{
 			background: #333;
 			bottom: 0;
 			content: '';
@@ -111,10 +166,21 @@ img.emoji {
 			top: -9px;
 			transition: all .5s cubic-bezier(.3,0,.15,1);
 			width: 100%;
+		}
 
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
+
+		&::after{
+			top: 9px;
+			width: 44.4%;
+			background: #333;
+			bottom: 0;
+			content: '';
+			display: block;
+			height: 1px;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			transition: all .5s cubic-bezier(.3,0,.15,1);
 		}
 	}
 }
@@ -127,7 +193,11 @@ img.emoji {
 	.lesson, .communicate {
 		transform: translateY(0);
 	}
+	.vertical {
+		transform: translateY(0);
+	}
 }
+
 #gnavi {
     background: rgba(248,248,248,.95);
     left: 0;
@@ -138,6 +208,15 @@ img.emoji {
     visibility: hidden;
     z-index: 100;
 	transition: all 1s cubic-bezier(0,0,0,1);
+
+	.lesson, .communicate {
+		margin-top: 20px;
+		transform: translateY(-60px);
+		letter-spacing: .1em;
+		text-align: center;
+		transition: all 1s cubic-bezier(0,0,0,1);
+		width: 417px;
+	}
 
 
 	ul{
@@ -152,10 +231,11 @@ img.emoji {
 	}
 	
 	.vertical {
+		display: inline-block;
 		border-left: 1px solid #e6e6e6;
 		height: 200px;
-		-webkit-writing-mode: vertical-rl;
-		-ms-writing-mode: tb-rl;
+		// -webkit-writing-mode: vertical-rl;
+		// -ms-writing-mode: tb-rl;
 		writing-mode: vertical-rl;
 		transform: translateY(-20px);
 		transition: all 1s cubic-bezier(0,0,0,1);
