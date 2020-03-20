@@ -1,8 +1,6 @@
 @charset "UTF-8";
 body {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background: #f8f8f8;
+  background: #858585;
   color: #5c5c5c;
   font-size: 14px;
   font-family: '游明朝', 'Yu Mincho', YuMincho, serif;
@@ -439,38 +437,55 @@ img.wp-smiley ul li a.login:hover,
   transition: all 0.4s cubic-bezier(0.3, 0, 0.15, 1);
 }
 
-.cid-rThV7RsBn0 {
-  padding-top: 50px;
-  padding-bottom: 50px;
+#header {
+  background: #efefef;
+  font-family: '游明朝', 'Yu Mincho', YuMincho, serif;
+  font-weight: normal;
+  letter-spacing: .04em;
+  line-height: 1;
+  min-width: 1200px;
+  opacity: 1;
 }
 
-.cid-rThV7RsBn0 margin:auto
+@media screen and (max-width: 768px) {
+  #header {
+    font-size: 12px;
+    min-width: auto;
+  }
+}
+
 #header .logo {
   line-height: 240px;
+  text-align: center;
 }
 
-.cid-rThV7RsBn0 a {
-  color: #333;
-  text-decoration: none;
-  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
-  transition: all 1s cubic-bezier(0, 0, 0, 1);
-  cursor: pointer;
-}
-
-.cid-rThV7RsBn0 a hover {
-  opacity: .5;
-}
-
-.cid-rThV7RsBn0 a img {
+#header .logo img {
   width: 78px;
   max-width: 100%;
   vertical-align: middle;
 }
 
-@media screen and (max-width: 768px) {
-  .cid-rThV7RsBn0 a img {
-    font-size: 12px;
-  }
+#header .logo a {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+}
+
+#header .logo a:hover {
+  opacity: .5;
+}
+
+.news .date {
+  color: #999;
+  font-size: 85.7%;
+  left: 0px;
+  position: absolute;
+  top: 20px;
+  -webkit-transform: rotate(90deg) translateX(-0.5em);
+          transform: rotate(90deg) translateX(-0.5em);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
 .news p {
@@ -479,10 +494,13 @@ img.wp-smiley ul li a.login:hover,
 }
 
 .news a {
-  color: #333;
   text-decoration: none;
   -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
   transition: all 1s cubic-bezier(0, 0, 0, 1);
+  font-family: '游明朝', 'Yu Mincho', YuMincho, serif;
+  font-size: 90.4%;
+  color: #5c5c5c;
+  font-weight: normal;
 }
 
 .news .more {
@@ -537,6 +555,15 @@ img.wp-smiley ul li a.login:hover,
   width: 100%;
   -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
   transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+}
+
+.aboutus .lead {
+  font-size: 121.4%;
+  letter-spacing: .2em;
+  line-height: 2.28;
+  color: #5c5c5c;
+  font-family: '游明朝', 'Yu Mincho', YuMincho, serif;
+  font-weight: normal;
 }
 
 .aboutus .more {
@@ -603,9 +630,28 @@ img.wp-smiley ul li a.login:hover,
   transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
 }
 
+.lesson h2 {
+  color: #333;
+  font-size: 178.5%;
+  left: 80px;
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  letter-spacing: .2em;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+}
+
 .lesson p {
   font-size: 12px;
   min-width: auto;
+  color: #5c5c5c;
+  font-size: 14px;
+  font-family: '游明朝', 'Yu Mincho', YuMincho, serif;
+  font-weight: normal;
+  letter-spacing: .04em;
 }
 
 .lesson .more {
@@ -670,5 +716,109 @@ img.wp-smiley ul li a.login:hover,
   width: 100%;
   -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
   transition: all 0.6s cubic-bezier(0.3, 0, 0.15, 1);
+}
+
+#footer .communicate {
+  background: #858585;
+  margin: 0 auto;
+  overflow: hidden;
+  list-style: none;
+  width: 100%;
+}
+
+#footer .communicate li {
+  display: inline-block;
+  width: 300px;
+  text-align: -webkit-match-parent;
+}
+
+#footer .communicate li .banner {
+  background: #fff;
+  color: #333;
+  display: block;
+  letter-spacing: .1em;
+  line-height: 60px;
+}
+
+#footer .communicate li a {
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+}
+
+#footer .communicate li a:hover {
+  opacity: .5;
+}
+
+#footer .communicate li a img {
+  width: 20px;
+  margin-right: 5px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+#footer .communicate li:nth-child(n+2) {
+  margin-left: 30px;
+  display: inline-block;
+  width: 300px;
+}
+
+#footer .communicate li:nth-child(n+2) .banner {
+  background: #fff;
+  color: #333;
+  display: block;
+  letter-spacing: .1em;
+  line-height: 60px;
+}
+
+#footer .communicate li:nth-child(n+2) .banner img {
+  width: 18px;
+  margin-right: 5px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+#footer .communicate li:last-child {
+  display: block;
+  width: 100%;
+}
+
+#footer .communicate li:last-child .facebook, #footer .communicate li:last-child .instagram {
+  margin: 35px 0 20px 0;
+}
+
+#footer .communicate li:last-child a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+  margin-right: 30px;
+}
+
+#footer .communicate li:last-child a img {
+  width: 12px;
+  margin-right: 2px;
+  padding-bottom: 2px;
+  vertical-align: middle;
+}
+
+#footer ul a {
+  font-size: 89.3%;
+  margin-top: 60px;
+  font-family: '游ゴシック', '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif;
+  font-weight: normal;
+  letter-spacing: .04em;
+  line-height: 1;
+  font-size: 89.3%;
+  margin-top: 60px;
+  color: #707070;
+  text-decoration: none;
+  -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+  transition: all 1s cubic-bezier(0, 0, 0, 1);
+}
+
+#footer ul a:hover {
+  opacity: .5;
 }
 /*# sourceMappingURL=style.css.map */
